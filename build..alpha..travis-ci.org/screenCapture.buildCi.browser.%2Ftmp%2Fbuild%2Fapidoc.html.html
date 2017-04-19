@@ -1,0 +1,959 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/assistunion/xml-stream">xml-stream (v0.4.5)</a>
+</h1>
+<h4>XML stream to JavaScript object converter based on Expat.</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.xml-stream">module xml-stream</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xml-stream.xml-stream">
+            function <span class="apidocSignatureSpan"></span>xml-stream
+            <span class="apidocSignatureSpan">(stream, encoding)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xml-stream.finite_automata">
+            function <span class="apidocSignatureSpan">xml-stream.</span>finite_automata
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xml-stream.super_">
+            function <span class="apidocSignatureSpan">xml-stream.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xml-stream.xml_stream">
+            function <span class="apidocSignatureSpan">xml-stream.</span>xml_stream
+            <span class="apidocSignatureSpan">(stream, encoding)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">xml-stream.</span>finite_automata.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">xml-stream.</span>xml_stream.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.xml-stream.finite_automata">module xml-stream.finite_automata</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xml-stream.finite_automata.finite_automata">
+            function <span class="apidocSignatureSpan">xml-stream.</span>finite_automata
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.xml-stream.finite_automata.prototype">module xml-stream.finite_automata.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xml-stream.finite_automata.prototype.enter">
+            function <span class="apidocSignatureSpan">xml-stream.finite_automata.prototype.</span>enter
+            <span class="apidocSignatureSpan">(symbol, args)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xml-stream.finite_automata.prototype.go">
+            function <span class="apidocSignatureSpan">xml-stream.finite_automata.prototype.</span>go
+            <span class="apidocSignatureSpan">(symbol, args)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xml-stream.finite_automata.prototype.isDeterministic">
+            function <span class="apidocSignatureSpan">xml-stream.finite_automata.prototype.</span>isDeterministic
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xml-stream.finite_automata.prototype.leave">
+            function <span class="apidocSignatureSpan">xml-stream.finite_automata.prototype.</span>leave
+            <span class="apidocSignatureSpan">(args)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xml-stream.finite_automata.prototype.nextState">
+            function <span class="apidocSignatureSpan">xml-stream.finite_automata.prototype.</span>nextState
+            <span class="apidocSignatureSpan">(symbol)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xml-stream.finite_automata.prototype.on">
+            function <span class="apidocSignatureSpan">xml-stream.finite_automata.prototype.</span>on
+            <span class="apidocSignatureSpan">(type, state, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xml-stream.finite_automata.prototype.run">
+            function <span class="apidocSignatureSpan">xml-stream.finite_automata.prototype.</span>run
+            <span class="apidocSignatureSpan">(state, args)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xml-stream.finite_automata.prototype.setState">
+            function <span class="apidocSignatureSpan">xml-stream.finite_automata.prototype.</span>setState
+            <span class="apidocSignatureSpan">(state, args)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xml-stream.finite_automata.prototype.transition">
+            function <span class="apidocSignatureSpan">xml-stream.finite_automata.prototype.</span>transition
+            <span class="apidocSignatureSpan">(stateFrom, symbol, stateTo)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.xml-stream.xml_stream">module xml-stream.xml_stream</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xml-stream.xml_stream.xml_stream">
+            function <span class="apidocSignatureSpan">xml-stream.</span>xml_stream
+            <span class="apidocSignatureSpan">(stream, encoding)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xml-stream.xml_stream.super_">
+            function <span class="apidocSignatureSpan">xml-stream.xml_stream.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.xml-stream.xml_stream.prototype">module xml-stream.xml_stream.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xml-stream.xml_stream.prototype.collect">
+            function <span class="apidocSignatureSpan">xml-stream.xml_stream.prototype.</span>collect
+            <span class="apidocSignatureSpan">(selector)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xml-stream.xml_stream.prototype.on">
+            function <span class="apidocSignatureSpan">xml-stream.xml_stream.prototype.</span>on
+            <span class="apidocSignatureSpan">(eventName, listener)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xml-stream.xml_stream.prototype.pause">
+            function <span class="apidocSignatureSpan">xml-stream.xml_stream.prototype.</span>pause
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xml-stream.xml_stream.prototype.preserve">
+            function <span class="apidocSignatureSpan">xml-stream.xml_stream.prototype.</span>preserve
+            <span class="apidocSignatureSpan">(selector, whitespace)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xml-stream.xml_stream.prototype.resume">
+            function <span class="apidocSignatureSpan">xml-stream.xml_stream.prototype.</span>resume
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.xml-stream" id="apidoc.module.xml-stream">module xml-stream</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.xml-stream.xml-stream" id="apidoc.element.xml-stream.xml-stream">
+        function <span class="apidocSignatureSpan"></span>xml-stream
+        <span class="apidocSignatureSpan">(stream, encoding)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function XmlStream(stream, encoding) {
+  events.EventEmitter.call(this);
+  this._stream = stream;
+  this._fa = new FiniteAutomata();
+  this._lastState = 0;
+  this._startState = {};
+  this._finalStates = {};
+  this._emitData = false;
+  this._bufferLevel = 0;
+  this._preserveLevel = 0;
+  this._preserveWhitespace = 0;
+  this._preserveAll = false;
+  this._collect = false;
+  this._parser = undefined;
+
+  // Set input stream encoding and create an iconv instance,
+  // if conversion is required. Default working encoding is UTF-8,
+  // so iconv is used when input is anything else, but UTF-8.
+  this._encoding = encoding || null;
+  this._encoder = makeEncoder(this._encoding);
+
+  var scope = this;
+
+  // Start parsing.
+  process.nextTick(function () {
+    parse.call(scope);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.xml-stream.finite_automata" id="apidoc.element.xml-stream.finite_automata">
+        function <span class="apidocSignatureSpan">xml-stream.</span>finite_automata
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function FiniteAutomata() {
+  this._symbols = {};
+  this._states = {};
+  this._deterministic = true;
+  this._state = {};
+  this._callbacks = {
+    enter: {},
+    leave: {},
+    state: {},
+    flag: {}
+  };
+  this._stack = [];
+  this._stackPtr = -1;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.xml-stream.super_" id="apidoc.element.xml-stream.super_">
+        function <span class="apidocSignatureSpan">xml-stream.</span>super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EventEmitter() {
+  EventEmitter.init.call(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.xml-stream.xml_stream" id="apidoc.element.xml-stream.xml_stream">
+        function <span class="apidocSignatureSpan">xml-stream.</span>xml_stream
+        <span class="apidocSignatureSpan">(stream, encoding)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function XmlStream(stream, encoding) {
+  events.EventEmitter.call(this);
+  this._stream = stream;
+  this._fa = new FiniteAutomata();
+  this._lastState = 0;
+  this._startState = {};
+  this._finalStates = {};
+  this._emitData = false;
+  this._bufferLevel = 0;
+  this._preserveLevel = 0;
+  this._preserveWhitespace = 0;
+  this._preserveAll = false;
+  this._collect = false;
+  this._parser = undefined;
+
+  // Set input stream encoding and create an iconv instance,
+  // if conversion is required. Default working encoding is UTF-8,
+  // so iconv is used when input is anything else, but UTF-8.
+  this._encoding = encoding || null;
+  this._encoder = makeEncoder(this._encoding);
+
+  var scope = this;
+
+  // Start parsing.
+  process.nextTick(function () {
+    parse.call(scope);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.xml-stream.finite_automata" id="apidoc.module.xml-stream.finite_automata">module xml-stream.finite_automata</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.xml-stream.finite_automata.finite_automata" id="apidoc.element.xml-stream.finite_automata.finite_automata">
+        function <span class="apidocSignatureSpan">xml-stream.</span>finite_automata
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function FiniteAutomata() {
+  this._symbols = {};
+  this._states = {};
+  this._deterministic = true;
+  this._state = {};
+  this._callbacks = {
+    enter: {},
+    leave: {},
+    state: {},
+    flag: {}
+  };
+  this._stack = [];
+  this._stackPtr = -1;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.xml-stream.finite_automata.prototype" id="apidoc.module.xml-stream.finite_automata.prototype">module xml-stream.finite_automata.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.xml-stream.finite_automata.prototype.enter" id="apidoc.element.xml-stream.finite_automata.prototype.enter">
+        function <span class="apidocSignatureSpan">xml-stream.finite_automata.prototype.</span>enter
+        <span class="apidocSignatureSpan">(symbol, args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">enter = function (symbol, args) {
+  if (args == null) {
+    args = [];
+  }
+  var next = this.nextState(symbol);
+  this._stack[++this._stackPtr] = next;
+  this._state = next;
+  run.call(this, 'flag');
+  run.call(this, 'enter', args);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.xml-stream.finite_automata.prototype.go" id="apidoc.element.xml-stream.finite_automata.prototype.go">
+        function <span class="apidocSignatureSpan">xml-stream.finite_automata.prototype.</span>go
+        <span class="apidocSignatureSpan">(symbol, args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">go = function (symbol, args) {
+  var next = this.nextState(symbol)
+  this.setState(next, args);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.xml-stream.finite_automata.prototype.isDeterministic" id="apidoc.element.xml-stream.finite_automata.prototype.isDeterministic">
+        function <span class="apidocSignatureSpan">xml-stream.finite_automata.prototype.</span>isDeterministic
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isDeterministic = function () {
+  return this._deterministic;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.xml-stream.finite_automata.prototype.leave" id="apidoc.element.xml-stream.finite_automata.prototype.leave">
+        function <span class="apidocSignatureSpan">xml-stream.finite_automata.prototype.</span>leave
+        <span class="apidocSignatureSpan">(args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">leave = function (args) {
+  this._stack[this._stackPtr] = undefined;
+  run.call(this, 'leave', args);
+  this._state = this._stack[--this._stackPtr];
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.xml-stream.finite_automata.prototype.nextState" id="apidoc.element.xml-stream.finite_automata.prototype.nextState">
+        function <span class="apidocSignatureSpan">xml-stream.finite_automata.prototype.</span>nextState
+        <span class="apidocSignatureSpan">(symbol)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">nextState = function (symbol) {
+  var newState = {};
+  for (var st in this._state) if (__own.call(this._state, st)) {
+    if (__own.call(this._states, st)) {
+      var next = this._states[st];
+      if (__own.call(next, symbol)) {
+        extend(newState, next[symbol]);
+      }
+      if (__own.call(next, '')) {
+        extend(newState, (next['']));
+      }
+    }
+  }
+  return newState;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    }
+  }
+}
+return newState;
+};
+
+FiniteAutomata.prototype.go = function(symbol, args) {
+var next = this.<span class="apidocCodeKeywordSpan">nextState</span>(symbol)
+this.setState(next, args);
+return this;
+};
+
+FiniteAutomata.prototype.leave = function(args) {
+this._stack[this._stackPtr] = undefined;
+run.call(this, 'leave', args);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.xml-stream.finite_automata.prototype.on" id="apidoc.element.xml-stream.finite_automata.prototype.on">
+        function <span class="apidocSignatureSpan">xml-stream.finite_automata.prototype.</span>on
+        <span class="apidocSignatureSpan">(type, state, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">on = function (type, state, cb) {
+  if (!__own.call(this._callbacks, type)) {
+    this._callbacks[type] = {};
+  }
+  var typeCbs = this._callbacks[type];
+  if (!__own.call(typeCbs, state)) {
+    typeCbs[state] = [];
+  }
+  typeCbs[state].push(cb);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+By default, parsed element node contains children as properties. In the case
+of several children with same names, the last one would overwrite others.
+To collect all of *subitem* elements in an array use **collect**:
+
+```javascript
+xml.collect('subitem');
+xml.<span class="apidocCodeKeywordSpan">on</span>('endElement: item', function(item) {
+  console.log(item);
+})
+```
+
+# Preserving Elements and Text
+
+By default, element text is returned as one concatenated string. In this XML:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.xml-stream.finite_automata.prototype.run" id="apidoc.element.xml-stream.finite_automata.prototype.run">
+        function <span class="apidocSignatureSpan">xml-stream.finite_automata.prototype.</span>run
+        <span class="apidocSignatureSpan">(state, args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">run = function (state, args) {
+  run.call(this, state, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.xml-stream.finite_automata.prototype.setState" id="apidoc.element.xml-stream.finite_automata.prototype.setState">
+        function <span class="apidocSignatureSpan">xml-stream.finite_automata.prototype.</span>setState
+        <span class="apidocSignatureSpan">(state, args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setState = function (state, args) {
+  this._state = state;
+  run.call(this, 'enter', args);
+  run.call(this, 'state', args);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  }
+}
+return newState;
+};
+
+FiniteAutomata.prototype.go = function(symbol, args) {
+var next = this.nextState(symbol)
+this.<span class="apidocCodeKeywordSpan">setState</span>(next, args);
+return this;
+};
+
+FiniteAutomata.prototype.leave = function(args) {
+this._stack[this._stackPtr] = undefined;
+run.call(this, 'leave', args);
+this._state = this._stack[--this._stackPtr];
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.xml-stream.finite_automata.prototype.transition" id="apidoc.element.xml-stream.finite_automata.prototype.transition">
+        function <span class="apidocSignatureSpan">xml-stream.finite_automata.prototype.</span>transition
+        <span class="apidocSignatureSpan">(stateFrom, symbol, stateTo)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">transition = function (stateFrom, symbol, stateTo) {
+  this._symbols[symbol] = true;
+  var s;
+  if (__own.call(this._states, stateFrom)) {
+    s = this._states[stateFrom];
+  } else {
+    s = this._states[stateFrom] = {};
+  }
+  var exists = __own.call(s, symbol);
+  if (exists) {
+    s = s[symbol];
+  } else {
+    s = s[symbol] = {};
+  }
+  if (!__own.call(s, stateTo)) {
+    s[stateTo] = true;
+    this._deterministic &amp;= !exists;
+  }
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.xml-stream.xml_stream" id="apidoc.module.xml-stream.xml_stream">module xml-stream.xml_stream</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.xml-stream.xml_stream.xml_stream" id="apidoc.element.xml-stream.xml_stream.xml_stream">
+        function <span class="apidocSignatureSpan">xml-stream.</span>xml_stream
+        <span class="apidocSignatureSpan">(stream, encoding)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function XmlStream(stream, encoding) {
+  events.EventEmitter.call(this);
+  this._stream = stream;
+  this._fa = new FiniteAutomata();
+  this._lastState = 0;
+  this._startState = {};
+  this._finalStates = {};
+  this._emitData = false;
+  this._bufferLevel = 0;
+  this._preserveLevel = 0;
+  this._preserveWhitespace = 0;
+  this._preserveAll = false;
+  this._collect = false;
+  this._parser = undefined;
+
+  // Set input stream encoding and create an iconv instance,
+  // if conversion is required. Default working encoding is UTF-8,
+  // so iconv is used when input is anything else, but UTF-8.
+  this._encoding = encoding || null;
+  this._encoder = makeEncoder(this._encoding);
+
+  var scope = this;
+
+  // Start parsing.
+  process.nextTick(function () {
+    parse.call(scope);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.xml-stream.xml_stream.super_" id="apidoc.element.xml-stream.xml_stream.super_">
+        function <span class="apidocSignatureSpan">xml-stream.xml_stream.</span>super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EventEmitter() {
+  EventEmitter.init.call(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.xml-stream.xml_stream.prototype" id="apidoc.module.xml-stream.xml_stream.prototype">module xml-stream.xml_stream.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.xml-stream.xml_stream.prototype.collect" id="apidoc.element.xml-stream.xml_stream.prototype.collect">
+        function <span class="apidocSignatureSpan">xml-stream.xml_stream.prototype.</span>collect
+        <span class="apidocSignatureSpan">(selector)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">collect = function (selector) {
+  selector = normalizeSelector(selector);
+  var finalState = getFinalState.call(this, selector);
+  var self = this;
+  this._fa.on('flag', finalState, function() {
+    self._collect = true;
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+
+By default, parsed element node contains children as properties. In the case
+of several children with same names, the last one would overwrite others.
+To collect all of *subitem* elements in an array use **collect**:
+
+```javascript
+xml.<span class="apidocCodeKeywordSpan">collect</span>('subitem');
+xml.on('endElement: item', function(item) {
+  console.log(item);
+})
+```
+
+# Preserving Elements and Text
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.xml-stream.xml_stream.prototype.on" id="apidoc.element.xml-stream.xml_stream.prototype.on">
+        function <span class="apidocSignatureSpan">xml-stream.xml_stream.prototype.</span>on
+        <span class="apidocSignatureSpan">(eventName, listener)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">on = function (eventName, listener) {
+  var event = parseEvent(eventName);
+  if (event !== null) {
+    // If we're dealing with a selector event,
+    // continue with selector-specific processing logic.
+    XmlStream.super_.prototype.on.call(this, event.name, listener);
+    var finalState = getFinalState.call(this, event.selector);
+    var self = this;
+    if (event.type === 'updateElement') {
+      this._fa.on('enter', finalState, function() {
+        self._bufferLevel++;
+      });
+      this._fa.on('leave', finalState, function(element, context, trace) {
+        self.emit(event.name, element, context, trace);
+        if (!--self._bufferLevel &amp;&amp; self._emitData) {
+           emitElement.call(self, element, self._name, true);
+        }
+      });
+    } else {
+      var fn = function(element, context, trace) {
+        self.emit(event.name, element, context, trace);
+      };
+      this._fa.on(faModes[event.type], finalState, fn);
+    }
+  } else {
+    // Otherwise, we're dealing with a non-selector event.
+    if (eventName === 'data') {
+      this._emitData = true;
+    }
+    XmlStream.super_.prototype.on.call(this, eventName, listener);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+By default, parsed element node contains children as properties. In the case
+of several children with same names, the last one would overwrite others.
+To collect all of *subitem* elements in an array use **collect**:
+
+```javascript
+xml.collect('subitem');
+xml.<span class="apidocCodeKeywordSpan">on</span>('endElement: item', function(item) {
+  console.log(item);
+})
+```
+
+# Preserving Elements and Text
+
+By default, element text is returned as one concatenated string. In this XML:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.xml-stream.xml_stream.prototype.pause" id="apidoc.element.xml-stream.xml_stream.prototype.pause">
+        function <span class="apidocSignatureSpan">xml-stream.xml_stream.prototype.</span>pause
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pause = function () {
+  this._stream.pause();
+  this._suspended = true;
+  if( !this._parser.pause() ) {
+      throw(new Error("Cannot pause parser: "+this._parser.getError()));
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+
+# Pause and resume parsing
+
+If you want parsing to pause (for example, until some asynchronous operation
+of yours is finished), you can pause and resume XML parsing:
+```javascript
+xml.<span class="apidocCodeKeywordSpan">pause</span>();
+myAsyncFunction( function() {
+  xml.resume();
+});
+```
+Beware that resume() **must not** be called from within a handler callback.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.xml-stream.xml_stream.prototype.preserve" id="apidoc.element.xml-stream.xml_stream.prototype.preserve">
+        function <span class="apidocSignatureSpan">xml-stream.xml_stream.prototype.</span>preserve
+        <span class="apidocSignatureSpan">(selector, whitespace)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">preserve = function (selector, whitespace) {
+  selector = normalizeSelector(selector);
+  var finalState = getFinalState.call(this, selector);
+  var self = this;
+  this._fa.on('enter', finalState, function() {
+    self._preserveLevel++;
+    if (whitespace) {
+      self._preserveWhitespace++;
+    }
+  });
+  this._fa.on('leave', finalState, function() {
+    self._preserveLevel--;
+    if (whitespace) {
+      self._preserveWhitespace--;
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+
+The value of **$text** for *item* would be: `one 1 two 2` without any
+indication of the order of element *a*, element *b*, and text parts.
+To preserve this order:
+
+```javascript
+xml.<span class="apidocCodeKeywordSpan">preserve</span>('item');
+xml.on('endElement: item', function(item) {
+  console.log(item);
+})
+```
+
+# Pause and resume parsing
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.xml-stream.xml_stream.prototype.resume" id="apidoc.element.xml-stream.xml_stream.prototype.resume">
+        function <span class="apidocSignatureSpan">xml-stream.xml_stream.prototype.</span>resume
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">resume = function () {
+  this._suspended = false;
+
+  if( !this._parser.resume() ) {
+    throw(new Error("Cannot resume parser: "+this._parser.getError()));
+  }
+
+  // resume stream only if parser hasn't been paused again
+  if( !this._suspended ) {
+    this._stream.resume();
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+# Pause and resume parsing
+
+If you want parsing to pause (for example, until some asynchronous operation
+of yours is finished), you can pause and resume XML parsing:
+```javascript
+xml.pause();
+myAsyncFunction( function() {
+  xml.<span class="apidocCodeKeywordSpan">resume</span>();
+});
+```
+Beware that resume() **must not** be called from within a handler callback.
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
